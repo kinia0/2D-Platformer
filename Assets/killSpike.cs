@@ -18,6 +18,6 @@ public class killSpike : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Destroy(collision.gameObject);
-        collision.GetComponent<playerHealth>().AddDamage(damage);
+        collision.GetComponent<PlayerHealth>().AddDamage(damage);
     }
 }
