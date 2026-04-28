@@ -1,31 +1,29 @@
+
 using System;
 using TMPro;
 using UnityEngine;
 
-public class UiHealthDisplay : MonoBehaviour
+public class UI_HealthDisplay : MonoBehaviour
 {
+    public HealthComponent healthComponent;
+    public TextMeshProUGUI textComponent;
 
-    public TextMeshProUGUI healthText;
-    public PlayerHealth PlayerHealth;
-
-
-
-    void Start()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
     {
-        PlayerHealth.OnHealthChanged += OnHealthChanged;
-        PlayerHealth.OnHealthInitialised += OnHealthInit;
+        healthComponent.OnHealthChanged += OnHealthChaged;
+        healthComponent.OnHealthInitialized += OnHealthInitialized;
     }
 
-    private void OnHealthInit(float newHealth)
+    private void OnHealthInitialized(float newHealth)
     {
-        healthText.text = newHealth.ToString();
+        textComponent.text = newHealth.ToString();
     }
 
-    public void OnHealthChanged(float newHealth, float amountChanged)
+    private void OnHealthChaged(float newHealth, float amountChanged)
     {
-        //Debug.Log("On Health Changed Event");
-        healthText.text = newHealth.ToString();
+        //Debug.Log(newHealth + ":" + amountChanged);
+        textComponent.text = newHealth.ToString();
     }
-
 }
 
