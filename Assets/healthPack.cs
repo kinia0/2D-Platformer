@@ -1,23 +1,12 @@
 using UnityEngine;
 
-public class healthPack : MonoBehaviour
+public class HealthPack : MonoBehaviour
 {
     public float health = 1;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        collision.GetComponent<PlayerHealth>().AddHealth(health);
+        other.GetComponent<HealthComponent>().AddHealth(health);
         Destroy(gameObject);
     }
 }

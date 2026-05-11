@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -6,7 +7,10 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         collision.GetComponent<CoinComponent>().AddPoints(point);
         Destroy(gameObject);
     }
+
+
 }
