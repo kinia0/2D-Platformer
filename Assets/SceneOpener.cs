@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneOpener : MonoBehaviour
 {
-    public string sceneName;
+    public string sceneToOpen;
     public void OpenScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(0);
+        Debug.Log("a");
     }
-
 }
