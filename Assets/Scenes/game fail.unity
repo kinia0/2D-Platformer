@@ -266,7 +266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GET BETTER
+  m_text: 'TRY AGAIN
 
 '
   m_isRightToLeft: 0

@@ -10,3 +10,5 @@ public class SceneOpener : MonoBehaviour
         Debug.Log("a");
     }
 }
+
+

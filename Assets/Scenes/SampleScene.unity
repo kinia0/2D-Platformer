@@ -1251,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5267023833971236278, guid: 81c3b03e21c634e43abb8d93f2af6983, type: 3}
       propertyPath: damage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5267023833971236278, guid: 81c3b03e21c634e43abb8d93f2af6983, type: 3}
       propertyPath: m_Enabled
@@ -1939,8 +1939,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -461.18, y: 130.99}
-  m_SizeDelta: {x: -1279.6, y: -589.6953}
+  m_AnchoredPosition: {x: -754.19, y: 308.11}
+  m_SizeDelta: {x: -1508.4, y: -780.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698572823
 MonoBehaviour:
@@ -2164,7 +2164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.299, y: -122.89}
+  m_AnchoredPosition: {x: -245.3, y: -122.89}
   m_SizeDelta: {x: 178.62268, y: 81.929596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799818444
@@ -3638,6 +3638,7 @@ GameObject:
   - component: {fileID: 1048695809}
   - component: {fileID: 1048695808}
   - component: {fileID: 1048695810}
+  - component: {fileID: 1048695811}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3847,7 +3848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fa8285d7aebc645ace38e29f756bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 20
 --- !u!114 &1048695809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3874,6 +3875,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641423d1d2d6ea6438fcf885675519dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1048695811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048695801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e569d3b68aaf0674e9a72c2541f3226f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToOpen: 1
 --- !u!1001 &1108275572
 PrefabInstance:
   m_ObjectHideFlags: 0
