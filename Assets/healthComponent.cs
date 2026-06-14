@@ -35,6 +35,7 @@ public class HealthComponent : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+        
     }
 
     IEnumerator ResetInvincibility(float resetTime)

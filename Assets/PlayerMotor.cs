@@ -10,10 +10,12 @@ public class PlayerMotor : MonoBehaviour
     public float jumpforce = 5;
     public float maxspeed = 10;
     public float stoppingforce = 5;
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -23,11 +25,29 @@ public class PlayerMotor : MonoBehaviour
         HandleMaxSpeed();
 
         PlayerStopping();
+
+        animator.SetFloat("Speed", Mathf.Abs(rigidbody2D.linearVelocityX));
     }
 
     private void MovePlayer()
     {
         rigidbody2D.AddForce(new Vector2(direction.x * speed, 0));
+        if (direction.x != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+        if (direction.x > 0)
+        {
+            transform.localScale = new Vector3(5, 5, 1);
+        }
+        else if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-5, 5, 1);
+        }
     }
 
     private void HandleMaxSpeed()
@@ -69,5 +89,8 @@ public class PlayerMotor : MonoBehaviour
     {
         canJump = true;
     }
+
+
+
 
 }
